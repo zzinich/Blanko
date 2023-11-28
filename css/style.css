@@ -56,14 +56,25 @@ img {
 	padding: 0;
 	border: none;
 	background-color: var(--color-light);
+	border-radius: 6px;
+	padding: 12px 36px;
 	cursor: pointer;
+	
 	color: var(--color-dark);
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 24px; /* 150% */
 }
 
+.btn--accent {
+	background-color: var(--color-accent);
+}
 
 /* header */
 
 .header {
+	padding: 15px 0;
 	color: var(--color-light);
 	background-color: var(--color-dark);
 }
@@ -77,7 +88,7 @@ img {
 .nav__list {
 	display: flex;
 	align-items: center;
-	gap: 20px;
+	gap: 23px;
 }
 
 .logo {
@@ -85,6 +96,17 @@ img {
 }
 
 .mail {
+	background: rgba(255, 255, 255, 0.12);
+	border-radius: 4px;
+	padding: 4px 11px;
+	color: var(--color-light);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px; /* 150% */
+}
+
+.header__mail {
 	margin-right: auto;
 }
 
@@ -92,7 +114,21 @@ img {
 	margin-right: 65px;
 }
 
-.
+.nav__link {
+	color: var(--color-light);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px; /* 150% */
+}
+
+/* main */
+
+.hero__container {
+	background-color: var(--color-accent);
+}
+
+
 
 .advantages {
 }
