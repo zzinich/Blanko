@@ -40,19 +40,26 @@ img {
 	clip: rect(0 0 0 0);
 }
 
+.container {
+	max-width: 1310px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
 .list-reset {
 	padding: 0;
 	margin: 0;
 	list-style: none;
 }
 
-/*.btn-reset {
+.btn {
 	padding: 0;
 	border: none;
-	background-color: transparent;
+	background-color: var(--color-light);
 	cursor: pointer;
+	color: var(--color-dark);
 }
-*/
+
 
 /* header */
 
@@ -61,13 +68,32 @@ img {
 	background-color: var(--color-dark);
 }
 
-.container {
-	max-width: 1310px;
-	margin: 0 auto;
-	padding: 0 15px;
+
+.header__container {
+	display: flex;
+	align-items: center;
 }
-.main {
+
+.nav__list {
+	display: flex;
+	align-items: center;
+	gap: 20px;
 }
+
+.logo {
+	margin-right: 65px;
+}
+
+.mail {
+	margin-right: auto;
+}
+
+.header__nav {
+	margin-right: 65px;
+}
+
+.
+
 .advantages {
 }
 .drunk {
@@ -75,9 +101,6 @@ img {
 .landing__pages {
 }
 .footer {
-}
-.flex.header__container {
-}
 .main__page.flex {
 }
 .advantages__main__block {
