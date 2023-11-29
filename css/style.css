@@ -21,6 +21,8 @@ img {
 	--color-dark: #000;
 	--color-light: #fff;
 	--color-accent: #ff7143;
+
+	--gap: 16px;
 }
 
 .page {
@@ -59,7 +61,8 @@ img {
 	border-radius: 6px;
 	padding: 12px 36px;
 	cursor: pointer;
-	
+	display: inline-block;
+
 	color: var(--color-dark);
 	text-align: center;
 	font-size: 16px;
@@ -79,6 +82,10 @@ img {
 	background-color: var(--color-dark);
 }
 
+.header--position {
+	position: relative;
+	z-index: 5;
+}
 
 .header__container {
 	display: flex;
@@ -124,132 +131,142 @@ img {
 
 /* main */
 
-.hero__container {
+.hero {
 	background-color: var(--color-accent);
 }
 
-
-
-.advantages {
-}
-.drunk {
-}
-.landing__pages {
-}
-.footer {
-.main__page.flex {
-}
-.advantages__main__block {
-}
-.drunk__main__block {
-}
-.landing__name__block {
-}
-.landing__list {
-}
-.footer__top__block.flex {
-}
-.footer__text__button.flex {
-}
-.header__logo.flex {
-}
-.header__mail_block.flex {
-}
-.header__paragraph.flex {
-}
-.header__button.btn.btn__reset.flex {
-}
-.main__page_center {
-}
-.advantages__list.flex {
-}
-.drunk__block {
-}
-.landing__heading__text {
-}
-.landing__list__block.flex {
-}
-.footer__logo {
-}
-.footer__button {
-}
-.footer__text {
-}
-.footer__icon__link.flex {
-}
-.header__mail.flex {
-}
-.main__text__heading.flex {
-}
-.main__text_paragraph.flex {
-}
-.main__button_black.flex {
-}
-.main__button_white.flex {
-}
-.advantages__list__block {
-}
-.drunk__img {
-}
-.drunk__text {
-}
-.drunk__text__name {
-}
-.drunk__color__block {
-}
-.landing__block {
-}
-.footer__paragraph {
-}
-.inst {
-}
-.twitter {
-}
-.facebook {
-}
-.advantages__left__block {
-}
-.advantages__center__block {
-}
-.drunk__text__paragraph {
-}
-.drunk_name {
-}
-.drunk__director {
-}
-.color__left {
-}
-.color__right {
-}
-.landing__list_top {
-}
-.landing__board {
-}
-.inst__link {
-}
-.twitter__link {
-}
-.facebook__link {
-}
-.img__block__left {
-}
-.advantages__text {
-}
-.img__block__center {
-}
-.landing__img {
-}
-.landing__board__text {
-}
-.img__speed {
-}
-.advantages__text__header {
-}
-.advantages__text__paragraph {
-}
-.img__design {
-}
-.img__modularity {
+.hero__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
-/* header */
+.hero__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 587px;
+}
+
+.hero__wrapper {
+	padding-left: 23px;
+}
+
+.hero__title {
+	margin: 0;
+	margin-bottom: 27px;
+	color: var(--color-dark);
+	text-align: center;
+	font-size: 72px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 72px; /* 100% */
+}
+
+.hero-descr {
+	margin: 0 0 22px 0;
+	color: var(--color-dark);
+	text-align: center;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 27px; /* 150% */
+}
+
+.hero__btns {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.btn--big {
+	padding: 20px 37px;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.btn--dark {
+	background-color: var(--color-dark);
+	color: var(--color-light);
+}
+
+.hero__image {
+	margin-top: -80px;
+}
+
+/* benefits */
+
+.benefits {
+	padding: 80px 0;
+}
+
+.benefits__list {
+	--offsets: 2;
+	display: flex;
+	gap: var(--gap);
+}
+
+.benefits__item {
+	display: flex;
+	align-items: center;
+	width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));
+}
+
+@media (max-width: 920px) {
+	.benefits__list {
+		--offsets: 1;
+	}
+}
+
+@media (max-width: 920px) {
+	.benefits__list {
+		--offsets: 0;
+	}
+}
+
+.benefits__item::before {
+	content: '';
+	display: block;
+	flex-shrink: 0;
+	width: 100px;
+	height: 100px;
+	background-color: #fde7da;
+	background-position: center;
+	background-size: 48px 48px;
+	background-repeat: no-repeat;
+}
+
+.benefits__item--speed::before {
+	background-image: url(/img/IMAGE.png);
+}
+
+.benefits__item--design::before {
+	background-image: url(/img/IMAGE2.png);
+}
+
+.benefits__item--modularity::before {
+	background-image: url(/img/IMAGE3.png);
+}
+
+.benifits__text {
+	margin-left: 24px;
+}
+
+.benefits__subtitle {
+	margin: 0 0 13px 0;
+
+	color: var(--color-dark);
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 32px; /* 133.333% */
+}
+
+.benefits__descr {
+	margin: 0;
+	color: var(--color-dark);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px; /* 150% */
+}
